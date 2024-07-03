@@ -1,6 +1,6 @@
 {
   "include": [
-    "src"
+    "src/**/*"
   ], // which files to compile
   "exclude": [
     "node_modules"
