@@ -1,5 +1,5 @@
 {
-  "name": "first-project",
+  "name": "mongoose-assignment",
   "version": "1.0.0",
   "main": "dist/server.js",
   "scripts": {
