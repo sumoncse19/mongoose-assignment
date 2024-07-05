@@ -1,3 +1,16 @@
+# E-Commerce Backend: Only Products and Orders:
+
+GitHub Link: https://github.com/sumoncse19/mongoose-assignment
+Deployed Link: https://mongoose-assignments.vercel.app/
+
+## Technology:
+
+1. express
+2. mongoose
+3. cors
+4. dotenv
+5. zod
+
 ## At first we should create our projects folder then open the project in terminal, and follow this steps:
 
 ### Step 1: Creating a package.json file
