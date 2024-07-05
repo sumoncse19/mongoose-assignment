@@ -11,6 +11,9 @@
 4. dotenv
 5. zod
 6. typescript
+7. husky
+8. ESLint (To catch common errors in my code)
+9. Prettier (To make a default code formatting)
 
 ## Operation:
 
