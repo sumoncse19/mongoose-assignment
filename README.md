@@ -1,7 +1,7 @@
 # E-Commerce Backend: Only Products and Orders:
 
-GitHub Link: https://github.com/sumoncse19/mongoose-assignment
-Deployed Link: https://mongoose-assignments.vercel.app/
+- GitHub Link: https://github.com/sumoncse19/mongoose-assignment
+- Deployed Link: https://mongoose-assignments.vercel.app/
 
 ## Technology:
 
@@ -10,6 +10,11 @@ Deployed Link: https://mongoose-assignments.vercel.app/
 3. cors
 4. dotenv
 5. zod
+6. typescript
+
+## Operation:
+
+1. Basic CRUD operation with pre define schema
 
 ## At first we should create our projects folder then open the project in terminal, and follow this steps:
 
