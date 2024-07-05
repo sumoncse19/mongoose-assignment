@@ -14,7 +14,7 @@ const createProduct = async (req: Request, res: Response) => {
     }
     const productData = validationResult.data
     const product = await ProductServices.createProductIntoDB(productData)
-    SUCCESS(res, 'Product Created Successfully', product)
+    SUCCESS(res, 'Product Created Successfully!', product)
   } catch (error: unknown) {
     ERROR(
       res,
@@ -26,14 +26,14 @@ const createProduct = async (req: Request, res: Response) => {
 
 const getAllProducts = async (req: Request, res: Response) => {
   try {
-    const searchText = req.query.searchText
-    if (searchText) {
+    const searchTerm = req.query.searchTerm
+    if (searchTerm) {
       const products = await ProductServices.searchProductsFromDB(
-        searchText as string,
+        searchTerm as string,
       )
       SUCCESS(
         res,
-        `Searched Products ${searchText} retrieved Successfully`,
+        `Products matching search term '${searchTerm}' fetched successfully!`,
         products,
       )
     } else {
@@ -56,7 +56,7 @@ const getProductById = async (req: Request, res: Response) => {
     )
 
     if (product) {
-      SUCCESS(res, 'Product get Successfully', product)
+      SUCCESS(res, 'Product fetched successfully!', product)
     } else {
       SUCCESS(res, 'Product not found')
     }
@@ -89,7 +89,7 @@ const updateProduct = async (req: Request, res: Response) => {
     if (!product) {
       SUCCESS(res, 'Product not found')
     } else {
-      SUCCESS(res, 'Product updated successfully', product)
+      SUCCESS(res, 'Product updated successfully!', product)
     }
   } catch (error: unknown) {
     ERROR(
@@ -109,7 +109,7 @@ const deleteProduct = async (req: Request, res: Response) => {
     if (!product) {
       SUCCESS(res, 'Product not found')
     } else {
-      SUCCESS(res, 'Product Deleted successfully')
+      SUCCESS(res, 'Product Deleted successfully!', null)
     }
   } catch (error: unknown) {
     ERROR(

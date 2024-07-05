@@ -10,9 +10,9 @@ const getAllProductsFromDB = async () => {
   return await ProductModel.find()
 }
 
-const searchProductsFromDB = async (searchText: string) => {
+const searchProductsFromDB = async (searchTerm: string) => {
   return await ProductModel.find({
-    name: { $regex: searchText, $options: 'i' },
+    name: { $regex: searchTerm, $options: 'i' },
   })
 }
 
