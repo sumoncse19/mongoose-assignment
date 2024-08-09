@@ -7,8 +7,14 @@ const router = express.Router()
 
 router.post(
   '/create-user',
-  validateRequest(UserValidation.userValidationSchema),
+  validateRequest(UserValidation.createUserValidationSchema),
   UserControllers.createUser,
+)
+
+router.post(
+  '/login',
+  validateRequest(UserValidation.loginValidationSchema), // Create a login validation schema
+  UserControllers.loginUser,
 )
 
 export const UserRoutes = router

@@ -14,6 +14,19 @@ const createUser = catchAsync(async (req, res) => {
   })
 })
 
+const loginUser = catchAsync(async (req, res) => {
+  const { email, password } = req.body
+  const { user, token } = await UserServices.authenticateUser(email, password)
+
+  sendResponse(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: 'User logged in successfully!',
+    data: { user, token },
+  })
+})
+
 export const UserControllers = {
   createUser,
+  loginUser,
 }
