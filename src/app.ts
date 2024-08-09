@@ -2,6 +2,7 @@ import express, { Application, Request, Response } from 'express'
 import cors from 'cors'
 import { ProductRoutes } from './app/modules/product/product.routes'
 import { OrderRoutes } from './app/modules/order/order.routes'
+import { UserRoutes } from './app/modules/user/user.route'
 
 const app: Application = express()
 
@@ -12,6 +13,7 @@ app.use(cors())
 // application routes
 app.use('/api/products', ProductRoutes)
 app.use('/api/orders', OrderRoutes)
+app.use('/api/users', UserRoutes)
 
 const getAController = (req: Request, res: Response) => {
   res.status(200).json({
